@@ -33,9 +33,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<div class="navbar navbar-toggleable-md  navbar-inverse bg-inverse">
+		<nav class="navbar navbar-toggleable-md navbar-default">
 
 			<div class="<?php echo esc_html( $container ); ?>">
+
+			<button class="menu-toggle"></button>
+
+			<!-- The WordPress Menu goes here -->
+				<?php 
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'primary',
+						'container' => 'nav',
+						'container_class' => 'menu',
+						'menu_class'      => 'menu',
+						'fallback_cb'     => '',
+						//'walker'          => new WP_Bootstrap_Navwalker(),
+					)
+				); ?>
 
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
@@ -48,19 +63,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 						the_custom_logo();
 					} ?><!-- end custom logo -->
 
+					<div id = "headerLinks">
+						<a href = "#"><i class="fa fa-search" aria-hidden="true"></i></a>
+						<a href = "#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+						<a href = "#"><i class="fa fa-user" aria-hidden="true"></i></a>
+					</div>
 
-			<button class="menu-toggle"></button>
-
-<nav>
-  <ul class="menu">
-    <li>Home</li>
-    <li>Blog</li>
-    <li>About</li>
-    <li>Contact</li>
-  </ul>
-</nav>
-
-			</div><!-- .container -->
+			</nav><!-- .container -->
 
 		</div><!-- .site-navigation -->
 

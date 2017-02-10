@@ -19,3 +19,55 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get( 'Version' ) );
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
 }
+
+// Add the animate.css library
+function mc_enqueue_styles() {
+   wp_enqueue_style( 'Animate CSS', get_stylesheet_directory_uri() . '/animate/animate.min.css' );
+}
+add_action( 'wp_enqueue_scripts', 'mc_enqueue_styles' );
+
+// Register Sidebars
+function mc_custom_sidebars() {
+
+    $args = array(
+        'id'            => 'footer_1',
+        'class'         => 'footer_1',
+        'name'          => 'Footer 1',
+        'description'   => 'This widget area will appear in the first position of the footer.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+    );
+    register_sidebar( $args );
+
+    $args = array(
+        'id'            => 'footer_2',
+        'class'         => 'footer_2',
+        'name'          => 'Footer 2',
+        'description'   => 'This widget area will appear in the second position of the footer.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+    );
+    register_sidebar( $args );
+
+    $args = array(
+        'id'            => 'footer_3',
+        'class'         => 'footer_3',
+        'name'          => 'Footer 3',
+        'description'   => 'This widget area will appear in the third position of the footer.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+    );
+    register_sidebar( $args );
+
+    $args = array(
+        'id'            => 'footer_4',
+        'class'         => 'footer_4',
+        'name'          => 'Footer 4',
+        'description'   => 'This widget area will appear in the fourth position of the footer.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+    );
+    register_sidebar( $args );
+
+}
+add_action( 'widgets_init', 'mc_custom_sidebars' );
