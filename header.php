@@ -45,8 +45,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 					array(
 						'theme_location'  => 'primary',
 						'container' => 'nav',
-						'container_class' => 'menu',
-						'menu_class'      => 'menu',
+						'container_class' => 'main_menu',
+						'menu_class'      => 'main_menu',
 						'fallback_cb'     => '',
 						//'walker'          => new WP_Bootstrap_Navwalker(),
 					)

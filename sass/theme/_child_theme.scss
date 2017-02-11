@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5 {
     			margin-top: 15px;
 
     			a {
-    				font-size: 3vh;
+    				font-size: 2.5vh;
     			}
     		}
 
@@ -80,9 +80,6 @@ h1, h2, h3, h4, h5 {
     	border-radius: 5px;
 		}
 	}
-
-
-
 
 /*------------------------------------------------*/
 /*---------------------[FOOTER]-------------------*/
@@ -98,9 +95,10 @@ h1, h2, h3, h4, h5 {
 	}
 
 	#bottomFooter {
-		padding: 25px auto;
+		padding: 25px;
 		color: #666666;
 		font-size: 14px;
+		background-color: $brand-secondary;
 	}
 
 }
@@ -128,6 +126,37 @@ h1, h2, h3, h4, h5 {
 }
 
 #bestSellers {
+
+	h1 {
+	    text-align: center;
+	    margin-bottom: 25px;
+
+	    &:before {
+	    	border: 21px solid #36424a;
+			border-right-width: 170px;
+    		border-left-color: transparent;
+	    }
+
+	    &:after {
+	    	border: 21px solid #36424a;
+			border-left-width: 170px;
+    		border-right-color: transparent;
+	    }
+
+	    &:before, &:after {
+			content: '';
+		    display: inline-block;
+		    z-index: -1;
+		    transform: translateY(7px);
+	    }
+
+	    span {
+			border: solid 5px #ee0000;
+		    padding: 10px 25px;
+		    display: inline-flex;
+	    }
+}
+
 	a:hover {
 		text-decoration: none;
 	}

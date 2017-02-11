@@ -36,6 +36,8 @@ function mc_custom_sidebars() {
         'description'   => 'This widget area will appear in the first position of the footer.',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
+        'before_title'  => '<h5 class="widgettitle">',
+        'after_title'   => '</h5>',
     );
     register_sidebar( $args );
 
@@ -46,6 +48,8 @@ function mc_custom_sidebars() {
         'description'   => 'This widget area will appear in the second position of the footer.',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
+        'before_title'  => '<h5 class="widgettitle">',
+        'after_title'   => '</h5>',
     );
     register_sidebar( $args );
 
@@ -56,6 +60,8 @@ function mc_custom_sidebars() {
         'description'   => 'This widget area will appear in the third position of the footer.',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
+        'before_title'  => '<h5 class="widgettitle">',
+        'after_title'   => '</h5>',
     );
     register_sidebar( $args );
 
@@ -66,6 +72,8 @@ function mc_custom_sidebars() {
         'description'   => 'This widget area will appear in the fourth position of the footer.',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
+        'before_title'  => '<h5 class="widgettitle">',
+        'after_title'   => '</h5>',
     );
     register_sidebar( $args );
 

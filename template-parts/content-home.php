@@ -2,9 +2,9 @@
     <?php echo do_shortcode('[rev_slider alias="hero_slider"]'); ?>
 </div><!-- #heroSlider -->
 
-<h1 class = "h1">Best Sellers</h1>
-
 <div id = "bestSellers" class = "row mb pb sep">
+
+<h1 class = "h1 col-sm-12"><span>Best Sellers</span></h1>
 
 <?php $args = array(
     'post_type' => 'product',

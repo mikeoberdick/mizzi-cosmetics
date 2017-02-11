@@ -1,4 +1,4 @@
-.navbar button {
+nav button {
   opacity: 0.6;
   background-color: transparent;
   position: absolute;
@@ -12,7 +12,7 @@
   transition: opacity 0.2s ease-out;
 }
 
-.navbar button:before {
+nav button:before {
   content: "";
   position: absolute;
   top: 0;
@@ -28,7 +28,7 @@
   transition: opacity 0.2s ease-out, width 0.2s 0.2s ease-out;
 }
 
-.navbar button:after {
+nav button:after {
   opacity: 0;
   content: '×';
   color: #ee0000;
@@ -42,12 +42,12 @@
   transition: opacity 0.4s ease-out;
 }
 
-.navbar button:active {
+nav button:active {
   -webkit-transform: translateY(2px);
   transform: translateY(2px);
 }
 
-.navbar button:hover { opacity: 1; }
+nav button:hover { opacity: 1; }
 
 .open .navbar button { opacity: 1; }
 
@@ -66,7 +66,7 @@
   transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out, -webkit-transform 0.4s 1s ease-out;
 }
 
-nav.menu {
+nav.main_menu {
   z-index: 1;
   position: fixed;
   top: -100%;
@@ -82,7 +82,7 @@ nav.menu {
   overflow: hidden;
 }
 
-nav.menu:before {
+nav.main_menu:before {
   content: '';
   position: absolute;
   top: 0;
@@ -100,14 +100,21 @@ nav.menu:before {
   overflow: hidden;
 }
 
-.open nav.menu { top: 0; }
+.open nav.main_menu { top: 0; }
 
-.open nav.menu:before {
+.open nav.main_menu:before {
   -webkit-animation: menu-animation 0.8s ease-out forwards;
   animation: menu-animation 0.8s ease-out forwards;
 }
 
-ul.menu {
+ul#menu-main-navigation:before {
+    content: url(/wp-content/uploads/2017/02/mizzi_red_white_text_logo.png);
+    margin-bottom: 25px;
+    display: block;
+    opacity: 0;
+  }
+
+ul.main_menu {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -128,7 +135,7 @@ ul.menu {
 
 }
 
-ul.menu li {
+ul.main_menu li {
   opacity: 0;
   text-align: center;
   -webkit-transform: translate3d(0, 36px, 0);
@@ -140,7 +147,7 @@ ul.menu li {
   }
 }
 
-.dropdown-menu {
+.main_menu .dropdown-menu {
   position: relative;
   float: none;
 
@@ -149,7 +156,11 @@ ul.menu li {
   }
 }
 
-.open ul.menu li {
+.open ul#menu-main-navigation:before {
+  opacity: 1;
+  }
+
+.open ul.main_menu li {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -159,37 +170,42 @@ ul.menu li {
   transition: transform 0.2s ease-out, opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
 
-.open ul.menu li:nth-child(1) {
+ul#menu-main-navigation:before {
+  -webkit-transition-delay: 0.65s;
+  transition-delay: 0.65s; 
+}
+
+.open ul.main_menu li:nth-child(1) {
   -webkit-transition-delay: 0.75s;
   transition-delay: 0.75s;
 }
 
-.open ul.menu li:nth-child(2) {
+.open ul.main_menu li:nth-child(2) {
   -webkit-transition-delay: 0.85s;
   transition-delay: 0.85s;
 }
 
-.open ul.menu li:nth-child(3) {
+.open ul.main_menu li:nth-child(3) {
   -webkit-transition-delay: 0.95s;
   transition-delay: 0.95s;
 }
 
-.open ul.menu li:nth-child(4) {
+.open ul.main_menu li:nth-child(4) {
   -webkit-transition-delay: 1.05s;
   transition-delay: 1.05s;
 }
 
-.open ul.menu li:nth-child(5) {
+.open ul.main_menu li:nth-child(5) {
   -webkit-transition-delay: 1.15s;
   transition-delay: 1.15s;
 }
 
-.open ul.menu li:nth-child(6) {
+.open ul.main_menu li:nth-child(6) {
   -webkit-transition-delay: 1.25s;
   transition-delay: 1.25s;
 }
 
-.open ul.menu li:nth-child(7) {
+.open ul.main_menu li:nth-child(7) {
   -webkit-transition-delay: 1.35s;
   transition-delay: 1.35s;
 }
