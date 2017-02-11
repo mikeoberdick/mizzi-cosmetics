@@ -1,11 +1,11 @@
 /*
-Theme Name:  PRC
-Theme URI:   http://parrisretailingco.com
+Theme Name:  Mizzi Cosmetics
+Theme URI:   http://mizzicosmetics.com
 Version:     1.0
-Description: A child theme of Divi. This is a custom child theme created for our site PRC.
-Author:      admin
-Author URI:  http://parrisretailingco.com
-Template:    Divi
+Description: A custom built theme for Mizzi Cosmetics.
+Author:      Designs 4 The Web
+Author URI:  http://designs4theweb.com
+Template:    Understrap
 */
 
 /*------------------------------------------------*/
@@ -13,7 +13,11 @@ Template:    Divi
 /*------------------------------------------------*/
 
 h1, h2, h3, h4, h5 {
-	color: #000000;
+	color: $grey;
+}
+
+body {
+	color: #b2b2b2;
 }
 
 .mb {
@@ -25,7 +29,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .sep {
-	border-bottom: 1px solid #e6e6e6;
+	border-bottom: 1px solid $gold;
 }
 
 
@@ -35,6 +39,12 @@ h1, h2, h3, h4, h5 {
 
 .home #page-wrapper {
 	padding-top: 0px;
+}
+
+.shadow {
+    -webkit-box-shadow: 0 10px 6px -6px #c1c1c1;
+    -moz-box-shadow: 0 10px 6px -6px #c1c1c1;
+    box-shadow: 0 10px 6px -6px #c1c1c1;
 }
 
 /*------------------------------------------------*/
@@ -47,7 +57,8 @@ h1, h2, h3, h4, h5 {
 }
 
 #headerLinks a {
-	margin-right: 10px
+	margin-right: 10px;
+	color: $gold;
 }
 
 
@@ -86,19 +97,30 @@ h1, h2, h3, h4, h5 {
 /*------------------------------------------------*/
 
 #wrapper-footer {
-	background-color: #000000;
-	color: #ffffff;
+	background-color: $pink;
+	color: $grey;
 	padding-bottom: 0;
+	position: relative;
+    z-index: -1;
 
 	h2 {
-		color: $brand-primary;
+		color: $gold;
 	}
 
 	#bottomFooter {
 		padding: 25px;
-		color: #666666;
+		color: $grey;
 		font-size: 14px;
-		background-color: $brand-secondary;
+		background-color: $pink;
+
+		a {
+
+			color: $grey;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 
 }
@@ -123,22 +145,26 @@ h1, h2, h3, h4, h5 {
 		margin-right: 15px;
 	}
 
+	a {
+		color: $pink;
+	}
+
 }
 
-#bestSellers {
+#bestSellers, #instagramSlider {
 
 	h1 {
 	    text-align: center;
 	    margin-bottom: 25px;
 
 	    &:before {
-	    	border: 21px solid #36424a;
+	    	border: 21px solid $gold;
 			border-right-width: 170px;
     		border-left-color: transparent;
 	    }
 
 	    &:after {
-	    	border: 21px solid #36424a;
+	    	border: 21px solid $gold;
 			border-left-width: 170px;
     		border-right-color: transparent;
 	    }
@@ -151,7 +177,8 @@ h1, h2, h3, h4, h5 {
 	    }
 
 	    span {
-			border: solid 5px #ee0000;
+	    	color: $grey;
+			border: solid 5px $gold;
 		    padding: 10px 25px;
 		    display: inline-flex;
 	    }

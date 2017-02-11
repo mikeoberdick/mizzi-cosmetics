@@ -3,10 +3,10 @@ nav button {
   background-color: transparent;
   position: absolute;
   z-index: 2;
-  top: 20px;
+  top: 10px;
   border: none;
-  width: 36px;
-  height: 30px;
+  width: 30px;
+  height: 25px;
   outline: none;
   -webkit-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
@@ -22,7 +22,7 @@ nav button:before {
   margin: auto;
   right: auto;
   width: 100%;
-  background: -webkit-linear-gradient(top, #ee0000, #000 20%, transparent 20%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 80%, #000 80%, #000 100%);
+  background: -webkit-linear-gradient(top, $gold, #000 20%, transparent 20%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 80%, #000 80%, #000 100%);
   background: linear-gradient(to bottom, #000, #000 20%, transparent 20%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 80%, #000 80%, #000 100%);
   -webkit-transition: opacity 0.2s ease-out, width 0.2s 0.2s ease-out;
   transition: opacity 0.2s ease-out, width 0.2s 0.2s ease-out;
@@ -31,7 +31,7 @@ nav button:before {
 nav button:after {
   opacity: 0;
   content: '×';
-  color: #ee0000;
+  color: $gold;
   position: absolute;
   top: 16px;
   left: -4px;

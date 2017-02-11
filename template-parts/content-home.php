@@ -42,7 +42,7 @@
 
 <div id = "hpCallout" class = "row mb pb sep">
     <div class = "col-md-4">
-        <h3>Let's Socialize</h3>
+        <h3 class = "mb3">Let's Socialize</h3>
             <div id = "hpSocialIcons">
             <a href = "#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
             <a href = "#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -62,8 +62,7 @@
 
 </div><!-- #hpCallout -->
 
-<h1 class = "h1 text-center mb-3">@mizzicosmetics on Instagram</h1>
-
 <div id = "instagramSlider" class = "row">
+    <h1 class = "h1 col-sm-12"><span>@MIZZICOSMETICS</span></h1>
     <?php echo do_shortcode('[rev_slider alias="instagram"]'); ?>
 </div><!-- #instagramSlider -->
