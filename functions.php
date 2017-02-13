@@ -24,6 +24,7 @@ function theme_enqueue_styles() {
 function mc_enqueue_gf() {
     wp_enqueue_style( 'Didact Gothic', 'https://fonts.googleapis.com/css?family=Didact+Gothic' );
     wp_enqueue_style( 'Open Sans', 'https://fonts.googleapis.com/css?family=Open+Sans' );
+    wp_enqueue_style( 'Raleway', 'https://fonts.googleapis.com/css?family=Raleway' );
 }
 add_action('wp_enqueue_scripts', 'mc_enqueue_gf');
 

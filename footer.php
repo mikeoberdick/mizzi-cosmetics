@@ -19,19 +19,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div id = "footerWidgets" class = "row pb">
 
-		<div class = "col-lg-3 col-sm-2">
+		<div class = "col-lg-3 col-sm-12">
 			<?php dynamic_sidebar('footer_1'); ?>
 		</div>
 		
-		<div class = "col-lg-3 col-sm-2">
+		<div class = "col-lg-3 col-sm-12">
 			<?php dynamic_sidebar('footer_2'); ?>
 		</div>
 		
-		<div class = "col-lg-3 col-sm-2">
+		<div class = "col-lg-3 col-sm-12">
 			<?php dynamic_sidebar('footer_3'); ?>
 		</div>
 		
-		<div class = "col-lg-3 col-sm-2">
+		<div class = "col-lg-3 col-sm-12">
 			<?php dynamic_sidebar('footer_4'); ?>
 		</div>
 
@@ -50,7 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 					
-					<span>&copy; <?php the_date('Y') ?> <?php bloginfo( 'name' ); ?></span><br />
+					<span>&copy; 2013 – <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></span><br />
 					<span>Website by <a href = "http://www.designs4theweb.com">Designs 4 The Web</a></span>
 
 					</div><!-- .site-info -->
@@ -65,7 +65,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- wrapper end -->
 
-</div><!-- #page -->
+</div><!-- #page-wrapper -->
 
 <?php wp_footer(); ?>
 

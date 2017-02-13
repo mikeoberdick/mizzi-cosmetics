@@ -9489,11 +9489,6 @@ hr.sep {
 .home #page-wrapper {
   padding-top: 0px; }
 
-.shadow {
-  -webkit-box-shadow: 0 10px 6px -6px #c1c1c1;
-  -moz-box-shadow: 0 10px 6px -6px #c1c1c1;
-  box-shadow: 0 10px 6px -6px #c1c1c1; }
-
 /*------------------------------------------------*/
 /*--------------------[HEADER]--------------------*/
 /*------------------------------------------------*/
@@ -9514,11 +9509,16 @@ hr.sep {
 #wrapper-footer {
   background-color: #fae1e5;
   color: #777777;
-  padding-bottom: 0;
-  position: relative;
-  z-index: -1; }
-  #wrapper-footer h2 {
-    color: #cfc191; }
+  padding-top: 0;
+  padding-bottom: 0; }
+  #wrapper-footer .container {
+    padding-top: 30px; }
+  #wrapper-footer:before {
+    content: "";
+    display: block;
+    -webkit-box-shadow: 0 10px 6px -6px #c1c1c1;
+    -moz-box-shadow: 0 10px 6px -6px #c1c1c1;
+    box-shadow: 0 2px 5px 1px #c1c1c1; }
   #wrapper-footer #bottomFooter {
     padding: 25px;
     color: #777777;
@@ -9711,8 +9711,8 @@ ul.main_menu li {
   ul.main_menu li a {
     font-size: 3vh;
     color: #fae1e5;
-    font-weight: bold;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif; }
     ul.main_menu li a:hover, ul.main_menu li a:focus {
       text-decoration: none; }
 
@@ -9768,11 +9768,13 @@ li.menu-item-has-children > a:first-child {
 
 #menu-main-navigation .sub-menu {
   padding-left: 0;
-  margin-top: 15px; }
+  margin-top: 15px;
+  margin-bottom: 15px; }
   #menu-main-navigation .sub-menu a {
     font-size: 2vh;
     color: #ffffff;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif; }
 
 ul#menu-main-navigation:before {
   -webkit-transition-delay: 0.65s;

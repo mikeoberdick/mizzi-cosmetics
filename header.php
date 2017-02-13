@@ -48,7 +48,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'container_class' => 'main_menu',
 						'menu_class'      => 'main_menu',
 						'fallback_cb'     => '',
-						//'walker'          => new WP_Bootstrap_Navwalker(),
+						//'walker'        => new WP_Bootstrap_Navwalker(),
 					)
 				); ?>
 
@@ -66,7 +66,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div id = "headerLinks">
 						<a href = "#"><i class="fa fa-search" aria-hidden="true"></i></a>
 						<a href = "/cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-						<a href = "/account"><i class="fa fa-user" aria-hidden="true"></i></a>
+						<a href = "/my-account"><i class="fa fa-user" aria-hidden="true"></i></a>
 					</div>
 
 			</nav><!-- .container -->

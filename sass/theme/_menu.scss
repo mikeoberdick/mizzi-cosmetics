@@ -148,8 +148,8 @@ ul.main_menu li {
   a {
     font-size: 3vh;
     color: $pink;
-    font-weight: bold;
     text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
 
     &:hover, &:focus {
       text-decoration: none;
@@ -224,11 +224,13 @@ li.menu-item-has-children > a:first-child {
 #menu-main-navigation .sub-menu {
   padding-left: 0;
   margin-top: 15px;
+  margin-bottom: 15px;
 
   a {
     font-size: 2vh;
     color: #ffffff;
     text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
   }
 
 }
