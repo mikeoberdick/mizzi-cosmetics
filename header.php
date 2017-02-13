@@ -65,8 +65,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div id = "headerLinks">
 						<a href = "#"><i class="fa fa-search" aria-hidden="true"></i></a>
-						<a href = "#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-						<a href = "#"><i class="fa fa-user" aria-hidden="true"></i></a>
+						<a href = "/cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+						<a href = "/account"><i class="fa fa-user" aria-hidden="true"></i></a>
 					</div>
 
 			</nav><!-- .container -->

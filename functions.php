@@ -20,6 +20,13 @@ function theme_enqueue_styles() {
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
 }
 
+// Add the Google Fonts
+function mc_enqueue_gf() {
+    wp_enqueue_style( 'Didact Gothic', 'https://fonts.googleapis.com/css?family=Didact+Gothic' );
+    wp_enqueue_style( 'Open Sans', 'https://fonts.googleapis.com/css?family=Open+Sans' );
+}
+add_action('wp_enqueue_scripts', 'mc_enqueue_gf');
+
 // Add the animate.css library
 function mc_enqueue_styles() {
    wp_enqueue_style( 'Animate CSS', get_stylesheet_directory_uri() . '/animate/animate.min.css' );

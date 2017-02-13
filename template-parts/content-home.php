@@ -2,7 +2,7 @@
     <?php echo do_shortcode('[rev_slider alias="hero_slider"]'); ?>
 </div><!-- #heroSlider -->
 
-<div id = "bestSellers" class = "row mb pb sep">
+<div id = "bestSellers" class = "row mb pb">
 
 <h1 class = "h1 col-sm-12"><span>Best Sellers</span></h1>
 
@@ -40,6 +40,8 @@
 
 </div><!-- #bestSellers -->
 
+<hr class = "sep">
+
 <div id = "hpCallout" class = "row mb pb sep">
     <div class = "col-md-4">
         <h3 class = "mb3">Let's Socialize</h3>
@@ -61,6 +63,8 @@
     </div>
 
 </div><!-- #hpCallout -->
+
+<hr class = "sep">
 
 <div id = "instagramSlider" class = "row">
     <h1 class = "h1 col-sm-12"><span>@MIZZICOSMETICS</span></h1>

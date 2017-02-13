@@ -1,9 +1,9 @@
 nav button {
   opacity: 0.6;
+  color: $gold;
   background-color: transparent;
   position: absolute;
   z-index: 2;
-  top: 10px;
   border: none;
   width: 30px;
   height: 25px;
@@ -22,8 +22,8 @@ nav button:before {
   margin: auto;
   right: auto;
   width: 100%;
-  background: -webkit-linear-gradient(top, $gold, #000 20%, transparent 20%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 80%, #000 80%, #000 100%);
-  background: linear-gradient(to bottom, #000, #000 20%, transparent 20%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 80%, #000 80%, #000 100%);
+  background: -webkit-linear-gradient(top, $gold, $gold 20%, transparent 20%, transparent 40%, $gold 40%, $gold 60%, transparent 60%, transparent 80%, $gold 80%, $gold 100%);
+  background: linear-gradient(to bottom, $gold, $gold 20%, transparent 20%, transparent 40%, $gold 40%, $gold 60%, transparent 60%, transparent 80%, $gold 80%, $gold 100%);
   -webkit-transition: opacity 0.2s ease-out, width 0.2s 0.2s ease-out;
   transition: opacity 0.2s ease-out, width 0.2s 0.2s ease-out;
 }
@@ -45,6 +45,10 @@ nav button:after {
 nav button:active {
   -webkit-transform: translateY(2px);
   transform: translateY(2px);
+}
+
+nav button:focus {
+  outline: none;
 }
 
 nav button:hover { opacity: 1; }
@@ -108,7 +112,7 @@ nav.main_menu:before {
 }
 
 ul#menu-main-navigation:before {
-    content: url(/wp-content/uploads/2017/02/mizzi_red_white_text_logo.png);
+    content: url(/wp-content/uploads/2017/02/mizzi-symbols.png);
     margin-bottom: 25px;
     display: block;
     opacity: 0;
@@ -142,8 +146,14 @@ ul.main_menu li {
   transform: translate3d(0, 36px, 0);
 
   a {
-    font-size: 4vh;
-    color: #ffffff;
+    font-size: 3vh;
+    color: $pink;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
   }
 }
 
@@ -170,6 +180,60 @@ ul.main_menu li {
   transition: transform 0.2s ease-out, opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
 
+li.menu-item-has-children {
+  margin-top: 25px;
+}
+
+li.menu-item-has-children > a:first-child {
+      color: $gold;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 10px 15px;
+      border: solid 1px;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+
+#menu-item-59 {
+  background: $pink;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+
+  a {
+    color: $grey;
+    text-transform: uppercase;
+  }
+
+  a:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f290";
+    margin-right: 10px;
+  }
+}
+
+#menu-main-navigation .sub-menu {
+  padding-left: 0;
+  margin-top: 15px;
+
+  a {
+    font-size: 2vh;
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+
+}
+
+        
 ul#menu-main-navigation:before {
   -webkit-transition-delay: 0.65s;
   transition-delay: 0.65s; 
@@ -209,6 +273,47 @@ ul#menu-main-navigation:before {
   -webkit-transition-delay: 1.35s;
   transition-delay: 1.35s;
 }
+
+.open ul.main_menu li:nth-child(8) {
+  -webkit-transition-delay: 1.45s;
+  transition-delay: 1.45s;
+}
+
+.open ul.main_menu li:nth-child(9) {
+  -webkit-transition-delay: 1.55s;
+  transition-delay: 1.55s;
+}
+
+.open ul.main_menu li:nth-child(10) {
+  -webkit-transition-delay: 1.65s;
+  transition-delay: 1.65s;
+}
+
+.open ul.main_menu li:nth-child(11) {
+  -webkit-transition-delay: 1.75s;
+  transition-delay: 1.75s;
+}
+
+.open ul.main_menu li:nth-child(12) {
+  -webkit-transition-delay: 1.85s;
+  transition-delay: 1.85s;
+}
+
+.open ul.main_menu li:nth-child(13) {
+  -webkit-transition-delay: 1.95s;
+  transition-delay: 1.95s;
+}
+
+.open ul.main_menu li:nth-child(14) {
+  -webkit-transition-delay: 2.05s;
+  transition-delay: 2.05s;
+}
+
+.open ul.main_menu li:nth-child(15) {
+  -webkit-transition-delay: 2.15s;
+  transition-delay: 2.15s;
+}
+
 
 @-webkit-keyframes 
 menu-animation {  0% {
