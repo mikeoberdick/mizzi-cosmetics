@@ -9442,7 +9442,7 @@ h1, h2, h3, h4, h5 {
   font-family: 'Didact Gothic', sans-serif; }
 
 .page_header {
-  font-size: 92px;
+  font-size: 10vh;
   padding: 50px;
   text-align: center;
   text-transform: uppercase;
@@ -9497,8 +9497,9 @@ hr.sep {
   margin: 0 auto; }
 
 #headerLinks a {
-  margin-right: 10px;
-  color: #cfc191; }
+  margin-right: 15px;
+  color: #cfc191;
+  font-size: 3vh; }
 
 /*------------------------------------------------*/
 /*-------------------[MENU]-----------------------*/
@@ -9506,24 +9507,45 @@ hr.sep {
 /*------------------------------------------------*/
 /*---------------------[FOOTER]-------------------*/
 /*------------------------------------------------*/
+#preFooter {
+  padding: 30px 0;
+  background: #fae1e5;
+  text-align: center;
+  border-top: solid;
+  border-bottom: solid;
+  font-size: 5vh; }
+  #preFooter a {
+    margin-right: 10px; }
+
 #wrapper-footer {
-  background-color: #fae1e5;
   color: #777777;
   padding-top: 0;
-  padding-bottom: 0; }
-  #wrapper-footer .container {
-    padding-top: 30px; }
-  #wrapper-footer:before {
-    content: "";
-    display: block;
-    -webkit-box-shadow: 0 10px 6px -6px #c1c1c1;
-    -moz-box-shadow: 0 10px 6px -6px #c1c1c1;
-    box-shadow: 0 2px 5px 1px #c1c1c1; }
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 12px; }
+  #wrapper-footer #footerWidgets {
+    padding: 50px 0; }
+  #wrapper-footer h5 {
+    padding-bottom: 5px;
+    border-bottom: solid 2px;
+    text-transform: uppercase;
+    color: #cfc191; }
+  #wrapper-footer ul {
+    padding-left: 0; }
+    #wrapper-footer ul li {
+      margin-bottom: 5px; }
+      #wrapper-footer ul li a {
+        color: #777777;
+        text-transform: uppercase;
+        font-size: 12px; }
+        #wrapper-footer ul li a:hover {
+          text-decoration: none; }
   #wrapper-footer #bottomFooter {
     padding: 25px;
     color: #777777;
-    font-size: 14px;
-    background-color: #fae1e5; }
+    font-size: 10px;
+    text-transform: uppercase;
+    background: rgba(207, 193, 145, 0.65); }
     #wrapper-footer #bottomFooter a {
       color: #777777; }
       #wrapper-footer #bottomFooter a:hover {
@@ -9536,12 +9558,11 @@ hr.sep {
 /*----------------------[PAGES]-------------------*/
 /*------------------------------------------------*/
 /*|||||||||||||||||||[HOMEPAGE]|||||||||||||||||||*/
-#hpSocialIcons .fa {
-  font-size: 50px;
-  margin-right: 15px; }
-
 #hpSocialIcons a {
-  color: #fae1e5; }
+  color: #fae1e5;
+  font-size: 7.5vh;
+  margin-right: 15px;
+  margin-top: 3vh; }
 
 #bestSellers h1, #instagramSlider h1 {
   text-align: center;
@@ -9560,13 +9581,20 @@ hr.sep {
     z-index: -1;
     transform: translateY(7px); }
   #bestSellers h1 span, #instagramSlider h1 span {
-    color: #777777;
+    color: #000000;
     border: solid 5px #cfc191;
     padding: 10px 25px;
-    display: inline-flex; }
+    display: inline-flex;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Didact Gothic', sans-serif; }
 
 #bestSellers a:hover, #instagramSlider a:hover {
   text-decoration: none; }
+
+/*|||||||||||||||||||[LOCATIONSS]|||||||||||||||||||*/
+#wpsl-search-wrap .wpsl-select-wrap {
+  z-index: 0; }
 
 /*------------------------------------------------*/
 /*---------------[RESPONSIVE LAYOUTS]-------------*/

@@ -34,7 +34,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 ?>
 
-<div class="wrapper shadow" id="page-wrapper">
+<div class="wrapper" id="page-wrapper">
 
 	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 

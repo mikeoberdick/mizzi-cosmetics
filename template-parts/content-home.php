@@ -46,9 +46,9 @@
     <div class = "col-md-4">
         <h3 class = "mb3">Let's Socialize</h3>
             <div id = "hpSocialIcons">
-            <a href = "#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href = "#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href = "#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href = "https://www.instagram.com/mizzicosmetics/" target = "_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href = "https://twitter.com/lipluxect" target = "_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href = "https://www.facebook.com/MIZZICOSMETICS/" target = "_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             </div>
     </div>
     

@@ -13,6 +13,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_sidebar( 'footerfull' ); ?>
 
+<div id="preFooter">
+	<div class = "container">
+		<div class = "row">
+
+			<div id = "socialIcons" class = "col-sm-12 col-md-6">
+				<a href = "https://www.instagram.com/mizzicosmetics/" target = "_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+	            <a href = "https://twitter.com/lipluxect" target = "_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+	            <a href = "https://www.facebook.com/MIZZICOSMETICS/" target = "_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			</div>
+
+			<div id = "hpSignup" class = "col-sm-12  col-md-6">
+			MAILCHIMP SIGNUP HERE
+			</div>
+
+		</div>
+	</div>
+</div>
+
 <div class="wrapper" id="wrapper-footer">
 
 	<div class="<?php echo esc_html( $container ); ?>">
@@ -50,7 +68,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 					
-					<span>&copy; 2013 – <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></span><br />
+					<span>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></span><br />
 					<span>Website by <a href = "http://www.designs4theweb.com">Designs 4 The Web</a></span>
 
 					</div><!-- .site-info -->
