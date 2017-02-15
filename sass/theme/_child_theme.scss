@@ -123,6 +123,35 @@ hr.sep {
 	font-size: 3vh;
 }
 
+#topInfo {
+	background: $pink;
+    height: 35px;
+    display: flex;
+    padding: 5px 25px;
+    color: $grey;
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
+
+    #topMessage {
+    	align-self: center;
+    	
+    	p {
+	    	margin-bottom: 0;
+	    	font-size: 12px;
+	    	text-transform: uppercase;
+    	}
+    }
+
+    #topSocial {
+
+    	a {
+    	color: $grey;
+    	margin-right: 5px;
+    }
+   }   
+}
+
 
 
 
@@ -171,6 +200,7 @@ hr.sep {
 
 	ul {
 		padding-left: 0;
+		list-style: none;
 
 		li {
 			margin-bottom: 5px;
@@ -222,11 +252,35 @@ hr.sep {
 #hpSocialIcons {
 
 	a {
-		color: $pink;
+		color: $gold;
 		font-size: 7.5vh;
 		margin-right: 15px;
 		margin-top: 3vh;
 		}
+}
+
+#hpSignup, #footerSignup {
+
+	#mc_embed_signup_scroll {
+		display: flex;
+		#mce-EMAIL {
+			font-size: .9rem;
+		    padding-left: 10px;
+		    flex: 1 0 8em;
+		    border: solid 1px #d4c59b;
+		    height: 40px;
+		    border-right: 0;
+		    display: block;
+		}
+
+		#mc-embedded-subscribe {
+			height: 40px;
+			flex: 0 0 auto;
+			border-radius: 0;
+			border-top-right-radius: 5px;
+    		border-bottom-right-radius: 5px;
+		}
+	}
 }
 
 #bestSellers, #instagramSlider {

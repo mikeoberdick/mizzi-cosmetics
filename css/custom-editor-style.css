@@ -9501,6 +9501,25 @@ hr.sep {
   color: #cfc191;
   font-size: 3vh; }
 
+#topInfo {
+  background: #fae1e5;
+  height: 35px;
+  display: flex;
+  padding: 5px 25px;
+  color: #777777;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1); }
+  #topInfo #topMessage {
+    align-self: center; }
+    #topInfo #topMessage p {
+      margin-bottom: 0;
+      font-size: 12px;
+      text-transform: uppercase; }
+  #topInfo #topSocial a {
+    color: #777777;
+    margin-right: 5px; }
+
 /*------------------------------------------------*/
 /*-------------------[MENU]-----------------------*/
 /*------------------------------------------------*/
@@ -9531,7 +9550,8 @@ hr.sep {
     text-transform: uppercase;
     color: #cfc191; }
   #wrapper-footer ul {
-    padding-left: 0; }
+    padding-left: 0;
+    list-style: none; }
     #wrapper-footer ul li {
       margin-bottom: 5px; }
       #wrapper-footer ul li a {
@@ -9559,10 +9579,27 @@ hr.sep {
 /*------------------------------------------------*/
 /*|||||||||||||||||||[HOMEPAGE]|||||||||||||||||||*/
 #hpSocialIcons a {
-  color: #fae1e5;
+  color: #cfc191;
   font-size: 7.5vh;
   margin-right: 15px;
   margin-top: 3vh; }
+
+#hpSignup #mc_embed_signup_scroll, #footerSignup #mc_embed_signup_scroll {
+  display: flex; }
+  #hpSignup #mc_embed_signup_scroll #mce-EMAIL, #footerSignup #mc_embed_signup_scroll #mce-EMAIL {
+    font-size: .9rem;
+    padding-left: 10px;
+    flex: 1 0 8em;
+    border: solid 1px #d4c59b;
+    height: 40px;
+    border-right: 0;
+    display: block; }
+  #hpSignup #mc_embed_signup_scroll #mc-embedded-subscribe, #footerSignup #mc_embed_signup_scroll #mc-embedded-subscribe {
+    height: 40px;
+    flex: 0 0 auto;
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; }
 
 #bestSellers h1, #instagramSlider h1 {
   text-align: center;

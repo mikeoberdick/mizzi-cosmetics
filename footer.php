@@ -16,15 +16,31 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div id="preFooter">
 	<div class = "container">
 		<div class = "row">
-
 			<div id = "socialIcons" class = "col-sm-12 col-md-6">
-				<a href = "https://www.instagram.com/mizzicosmetics/" target = "_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-	            <a href = "https://twitter.com/lipluxect" target = "_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-	            <a href = "https://www.facebook.com/MIZZICOSMETICS/" target = "_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				<h3>Let's Socialize!</h3>
+					<a href = "https://www.instagram.com/mizzicosmetics/" target = "_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+		            <a href = "https://twitter.com/lipluxect" target = "_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+		            <a href = "https://www.facebook.com/MIZZICOSMETICS/" target = "_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 			</div>
 
-			<div id = "hpSignup" class = "col-sm-12  col-md-6">
-			MAILCHIMP SIGNUP HERE
+			<div id = "footerSignup" class = "col-sm-12  col-md-6">
+				<h3 class = "text-left">Join the Club</h3>
+					<div id="mc_embed_signup"><!-- Begin MailChimp Signup Form -->
+	                <form action="//mizzicosmetics.us13.list-manage.com/subscribe/post?u=c8578af665b301edf76be65e9&amp;id=60287b84bb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	                    <div id="mc_embed_signup_scroll">
+	                    
+	                <div class="mc-field-group">
+	                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder = "E-Mail Address">
+	                </div>
+	                    <div id="mce-responses" class="clear">
+	                        <div class="response" id="mce-error-response" style="display:none"></div>
+	                        <div class="response" id="mce-success-response" style="display:none"></div>
+	                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c8578af665b301edf76be65e9_60287b84bb" tabindex="-1" value=""></div>
+	                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline-primary btn-block"></div>
+	                    </div>
+	                </form>
+	            </div><!--End mc_embed_signup-->
 			</div>
 
 		</div>

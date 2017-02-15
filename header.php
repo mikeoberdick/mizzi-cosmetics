@@ -27,6 +27,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="hfeed site" id="page">
 
+<div class = "wrapper-fluid" id = "topInfo">
+	<div id = "topMessage" class = "col-md-8">
+		<p>Message Here</p>
+	</div>
+
+	<div class = "col-md-4">
+		<div id = "topSocial" class = "text-right">
+			<a href = "https://www.instagram.com/mizzicosmetics/" target = "_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+		    <a href = "https://twitter.com/lipluxect" target = "_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+		    <a href = "https://www.facebook.com/MIZZICOSMETICS/" target = "_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+		</div>
+    </div>
+</div>
+
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 
