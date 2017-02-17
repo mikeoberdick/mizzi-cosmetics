@@ -78,7 +78,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					} ?><!-- end custom logo -->
 
 					<div id = "headerLinks">
-						<a href = "#"><i class="fa fa-search" aria-hidden="true"></i></a>
+						<a href = "/shop" id = "headerShop" class = "btn btn-outline-primary btn-inline">SHOP <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<a href = "/cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
 						<a href = "/my-account"><i class="fa fa-user" aria-hidden="true"></i></a>
 					</div>

@@ -9441,6 +9441,13 @@ h1, h2, h3, h4, h5 {
   color: #000;
   font-family: 'Didact Gothic', sans-serif; }
 
+header .entry-header {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.titleWrapper {
+  background-color: rgba(255, 255, 255, 0.7); }
+
 .page_header {
   font-size: 10vh;
   padding: 50px;
@@ -9500,6 +9507,9 @@ hr.sep {
   margin-right: 15px;
   color: #cfc191;
   font-size: 3vh; }
+
+#headerLinks #headerShop:hover {
+  color: #fff; }
 
 #topInfo {
   background: #fae1e5;

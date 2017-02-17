@@ -7,14 +7,28 @@
 
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+	
+ 	<?php
 
-	<header class="entry-header">
-
+	if ( has_post_thumbnail() ) { ?>
+	
+	<header class="entry-header" style = "background-image: url('<?php the_post_thumbnail_url(); ?>')">
+		<div class = "titleWrapper">
 		<?php the_title( '<h1 class="entry-title page_header">', '</h1>' ); ?>
-
+		</div>
 	</header><!-- .entry-header -->
+	
+	<?php }
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	else { ?>
+
+    <header class="entry-header" style = "background-image: url('https://www.smashingmagazine.com/wp-content/uploads/2013/03/Wordpress-start-image.jpg')">
+    	<div class = "titleWrapper">
+		<?php the_title( '<h1 class="entry-title page_header">', '</h1>' ); ?>
+		</div>
+	</header><!-- .entry-header -->
+	
+	<?php } ?>
 
 	<div class="entry-content">
 

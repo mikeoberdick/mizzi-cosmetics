@@ -17,6 +17,15 @@ h1, h2, h3, h4, h5 {
 	font-family: 'Didact Gothic', sans-serif;
 }
 
+header .entry-header {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.titleWrapper {
+	background-color: rgba(255, 255, 255, 0.70);
+}
+
 .page_header {
 	font-size: 10vh;
 	padding: 50px;
@@ -117,10 +126,19 @@ hr.sep {
 	margin: 0 auto;
 }
 
-#headerLinks a {
-	margin-right: 15px;
-	color: $gold;
-	font-size: 3vh;
+#headerLinks {
+
+	a {
+		margin-right: 15px;
+		color: $gold;
+		font-size: 3vh;
+	}
+
+	#headerShop {
+			&:hover {
+				color: #fff;
+			}
+	}
 }
 
 #topInfo {
