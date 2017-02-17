@@ -22,7 +22,7 @@
 
 	else { ?>
 
-    <header class="entry-header" style = "background-image: url('https://www.smashingmagazine.com/wp-content/uploads/2013/03/Wordpress-start-image.jpg')">
+    <header class="entry-header" style = "background-image: url( <?php echo get_stylesheet_directory_uri() . '/img/mizzi_title_bg.jpg';?>)">
     	<div class = "titleWrapper">
 		<?php the_title( '<h1 class="entry-title page_header">', '</h1>' ); ?>
 		</div>
