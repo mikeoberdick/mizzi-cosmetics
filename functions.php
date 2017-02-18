@@ -34,6 +34,14 @@ function mc_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'mc_enqueue_styles' );
 
+// Add the animate.css library
+function mc_theme_js() {
+   wp_enqueue_script( 'MC Theme JS', get_stylesheet_directory_uri() . '/js/mc.js', array('jquery'), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'mc_theme_js' );
+
+ 
+
 // Register Sidebars
 function mc_custom_sidebars() {
 
@@ -103,4 +111,38 @@ if( function_exists('acf_add_options_page') ) {
 
     acf_add_options_page( $args );
     
+}
+
+// Display 20 products on the shop page
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 20;' ), 20 );
+
+// Remove WC Breadcrumbs on shop page
+add_action( 'init', 'mc_remove_wc_breadcrumbs' );
+function mc_remove_wc_breadcrumbs () {
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+}
+
+// Remove the add to cart button on the shop page
+add_action( 'init', 'mc_remove_atc' );
+function mc_remove_atc () {
+    remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10, 0 );
+}
+
+// Remove the tabs on single product page
+add_filter( 'woocommerce_product_tabs', 'mc_remove_product_tabs', 98 );
+
+function mc_remove_product_tabs( $tabs ) {
+
+    unset( $tabs['description'] );          // Remove the description tab
+    unset( $tabs['reviews'] );          // Remove the reviews tab
+    unset( $tabs['additional_information'] );   // Remove the additional information tab
+
+    return $tabs;
+
+}
+
+// Add the content from single product page into a section titled "More Info"
+add_action( 'woocommerce_after_single_product_summary', 'mc_single_product_more_info', 17 );
+function mc_single_product_more_info () {
+    echo '<div id = "productInfo"><h2>Product Info</h2><p>' . get_the_content() . '</p></div>';
 }

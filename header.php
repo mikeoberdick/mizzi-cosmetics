@@ -78,9 +78,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 					} ?><!-- end custom logo -->
 
 					<div id = "headerLinks">
+				
 						<a href = "/shop" id = "headerShop" class = "btn btn-outline-primary btn-inline">SHOP <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-						<a href = "/cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-						<a href = "/my-account"><i class="fa fa-user" aria-hidden="true"></i></a>
+						
+						<div id = "cartContents">
+							<a href = "<?php echo wc_get_cart_url(); ?>"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+						<?php 
+							$cartCount = WC()->cart->get_cart_contents_count();
+							if ($cartCount != 0) {
+								echo '<span>' . $cartCount . '</span>';
+							}
+								?>
+						</div>
+
+
+						<?php
+						$myaccount_page_id = get_option( 'woocommerce_myaccount_page_id' );
+						if ( $myaccount_page_id ) {
+  						$myaccount_page_url = get_permalink( $myaccount_page_id );
+						} ?>
+
+						<a href = "<?php echo $myaccount_page_url ?>"><i class="fa fa-user" aria-hidden="true"></i></a>
 					</div>
 
 			</nav><!-- .container -->

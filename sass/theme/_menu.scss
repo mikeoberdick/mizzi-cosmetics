@@ -1,4 +1,4 @@
-nav button {
+.menu-toggle {
   opacity: 0.6;
   color: $gold;
   background-color: transparent;
@@ -12,7 +12,7 @@ nav button {
   transition: opacity 0.2s ease-out;
 }
 
-nav button:before {
+.menu-toggle:before {
   content: "";
   position: absolute;
   top: 0;
@@ -28,7 +28,7 @@ nav button:before {
   transition: opacity 0.2s ease-out, width 0.2s 0.2s ease-out;
 }
 
-nav button:after {
+.menu-toggle:after {
   opacity: 0;
   content: '×';
   color: $gold;
@@ -42,25 +42,25 @@ nav button:after {
   transition: opacity 0.4s ease-out;
 }
 
-nav button:active {
+.menu-toggle:active {
   -webkit-transform: translateY(2px);
   transform: translateY(2px);
 }
 
-nav button:focus {
+.menu-toggle:focus {
   outline: none;
 }
 
-nav button:hover { opacity: 1; }
+.menu-toggle:hover { opacity: 1; }
 
-.open .navbar button { opacity: 1; }
+.open .navbar .menu-toggle { opacity: 1; }
 
-.open .navbar button:before {
+.open .navbar .menu-toggle:before {
   opacity: 0;
   width: 0;
 }
 
-.open .navbar button:after {
+.open .navbar .menu-toggle:after {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0) rotate(360deg);
   transform: translate3d(0, 0, 0) rotate(360deg);

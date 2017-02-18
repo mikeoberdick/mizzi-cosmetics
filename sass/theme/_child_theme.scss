@@ -17,9 +17,10 @@ h1, h2, h3, h4, h5 {
 	font-family: 'Didact Gothic', sans-serif;
 }
 
-header .entry-header {
-	background-size: cover;
+.entry-header {
+	background-size: 100%;
 	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .titleWrapper {
@@ -78,7 +79,7 @@ hr.sep {
 		font-weight: bold;
 	}
 
-	span {
+	p {
 		font-size: 12px;
 	}
 }
@@ -139,14 +140,18 @@ hr.sep {
 	    	text-transform: uppercase;
     	}
     }
+}
 
-    #topSocial {
+#cartContents {
+	display: inline;
+    position: relative;
 
-    	a {
-    	color: $grey;
-    	margin-right: 5px;
+    span {
+    position: absolute;
+    left: 50%;
+    color: #000;
+    font-size: 1.5vh;
     }
-   }   
 }
 
 
@@ -322,7 +327,53 @@ hr.sep {
 	}
 }
 
-/*|||||||||||||||||||[LOCATIONSS]|||||||||||||||||||*/
+
+
+
+/*|||||||||||||||||||[SHOP]|||||||||||||||||||*/
+
+#shopHeader {
+	display: block;
+	width: 100%;
+
+	.page_header {
+		margin-bottom: 0;
+	}
+}
+
+
+/*|||||||||||||||||||[SINGLE PRODUCT]|||||||||||||||||||*/
+
+.woocommerce-message {
+	width: 100%;
+	border-top-color: $gold;
+
+	&:before {
+		color: $gold;
+	}
+}
+
+#productInfo {
+	clear: both;
+
+	h2 {
+	margin-bottom: 25px;
+	}
+
+	p {
+		border: solid 1px $gold;
+		padding: 25px;
+	}
+	
+
+}
+
+.related {
+	clear: both;
+}
+
+
+/*|||||||||||||||||||[LOCATIONS]|||||||||||||||||||*/
 
 #wpsl-search-wrap .wpsl-select-wrap {
 	z-index: 0;
