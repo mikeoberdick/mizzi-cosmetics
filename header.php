@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div id = "topInfo">
 	<div id = "topMessage" class = "text-center">
-		<p><?php the_field('message_text', 'option'); ?></p>
+		<p><?php the_field('message_text', 'option'); ?><a href = "<?php the_field('message_link', 'option'); ?>"><?php the_field('link_text', 'option'); ?></a></p>
 	</div>
 
 <!-- 	<div class = "col-md-4">
@@ -68,7 +68,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
-					<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
+					<a class="navbar-brand" rel="home" href=/mc"<?php echo esc_url( home_url( '/' ) ); ?>"
 					   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 						<?php bloginfo( 'name' ); ?>
 					</a>
@@ -79,7 +79,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div id = "headerLinks">
 				
-						<a href = "/shop" id = "headerShop" class = "btn btn-outline-primary btn-inline">SHOP <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+						<a href = "<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );
+ ?>" id = "headerShop" class = "btn btn-outline-primary btn-inline">SHOP <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						
 						<div id = "cartContents">
 							<a href = "<?php echo wc_get_cart_url(); ?>"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>

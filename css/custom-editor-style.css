@@ -9528,6 +9528,16 @@ hr.sep {
       margin-bottom: 0;
       font-size: 12px;
       text-transform: uppercase; }
+    #topInfo #topMessage a {
+      margin-left: 5px;
+      padding: 3px 5px;
+      background-color: #000;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 11px;
+      vertical-align: top; }
+      #topInfo #topMessage a:hover, #topInfo #topMessage a:active {
+        text-decoration: none; }
 
 #cartContents {
   display: inline;
@@ -9675,6 +9685,12 @@ hr.sep {
 /*|||||||||||||||||||[LOCATIONS]|||||||||||||||||||*/
 #wpsl-search-wrap .wpsl-select-wrap {
   z-index: 0; }
+
+#wpsl-gmap {
+  z-index: -1; }
+
+#wpsl-radius label {
+  width: 50px !important; }
 
 /*------------------------------------------------*/
 /*---------------[RESPONSIVE LAYOUTS]-------------*/
