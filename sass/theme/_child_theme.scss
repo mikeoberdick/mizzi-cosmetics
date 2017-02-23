@@ -65,8 +65,8 @@ hr.sep {
     		position: relative;
 		    top: -27px;
 		    padding: 0 10px;
-		    background: #ffffff;
-		    color: $pink;
+		    background: $white;
+		    color: $black;
 		    font-size: 32px;
 				}
 }
@@ -115,21 +115,29 @@ hr.sep {
 
 	#headerShop {
 			&:hover {
-				color: #fff;
+				color: $white;
 			}
 	}
 }
 
+#wrapper-navbar {
+	padding-top: 35px;
+	margin-bottom: 25px;
+}
+
 #topInfo {
-	background: $pink;
+	background: $black;
     height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $grey;
+    color: $white;
     -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
 
     #topMessage {
     	align-self: center;
@@ -143,11 +151,10 @@ hr.sep {
     	a {
     		margin-left: 5px;
 		    padding: 3px 5px;
-		    background-color: #000;
-		    color: #fff;
-		    border-radius: 5px;
+		    background-color: $white;
+		    color: $black;
+		    border-radius: 2px;
 		    font-size: 11px;
-		    vertical-align: top;
 
 		    &:hover, &:active {
 		    	text-decoration: none;
@@ -183,11 +190,15 @@ hr.sep {
 
 #preFooter {
 	padding: 30px 0;
-    background: #fae1e5;
+    background: $black;
     text-align: center;
-    border-top: solid;
-    border-bottom: solid;
+    border-top: solid 10px $gold;
+    border-bottom: solid 10px $gold;
     font-size: 5vh;
+
+    h3 {
+    	color: $white;
+    }
 
     a {
     	margin-right: 10px;
@@ -202,6 +213,9 @@ hr.sep {
 	padding-bottom: 0;
 	text-transform: uppercase;
 	font-size: 12px;
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.82);
+	-moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.82);
+	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.82);
 
 	#footerWidgets {
 		padding: 50px 0;
@@ -232,25 +246,24 @@ hr.sep {
 			}
 		}
 	}
+}
 
 	#bottomFooter {
 		padding: 25px;
-		color: $grey;
+		color: $black;
 		font-size: 10px;
 		text-transform: uppercase;
 		background: rgba(207, 193, 145, 0.65);
 
 		a {
 
-			color: $grey;
+			color: $black;
 
 			&:hover {
 				text-decoration: none;
 			}
 		}
 	}
-
-}
 
 
 /*------------------------------------------------*/

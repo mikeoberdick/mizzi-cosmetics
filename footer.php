@@ -74,6 +74,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</div><!-- .container -->
 
+</div><!-- wrapper end -->
+
 	<div class = "container-fluid">
 
 		<div id = "bottomFooter" class="row">
@@ -96,10 +98,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div><!-- row end -->
 
 	</div><!-- .container-fluid -->
-
-</div><!-- wrapper end -->
-
-</div><!-- #page-wrapper -->
 
 <?php wp_footer(); ?>
 

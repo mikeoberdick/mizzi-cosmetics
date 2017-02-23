@@ -3,7 +3,7 @@
   color: $gold;
   background-color: transparent;
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   border: none;
   width: 30px;
   height: 25px;
@@ -71,7 +71,7 @@
 }
 
 nav.main_menu {
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   top: -100%;
   right: 0;
@@ -147,7 +147,7 @@ ul.main_menu li {
 
   a {
     font-size: 3vh;
-    color: $pink;
+    color: $gold;
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
 
@@ -197,15 +197,16 @@ li.menu-item-has-children > a:first-child {
     }
 
 #menu-item-59 {
-  background: $pink;
+  background: $black;
   padding: 10px;
   border-radius: 5px;
+  border: solid 2px $gold;
   font-weight: bold;
   display: inline-block;
   width: 100%;
 
   a {
-    color: $grey;
+    color: $gold;
     text-transform: uppercase;
   }
 
