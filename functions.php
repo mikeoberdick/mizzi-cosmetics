@@ -40,6 +40,12 @@ function mc_theme_js() {
 }
 add_action( 'wp_enqueue_scripts', 'mc_theme_js' );
 
+// Add the jquery cookie library
+function mc_cookie_js() {
+   wp_enqueue_script( 'JS Cookie JS', get_stylesheet_directory_uri() . '/js/js-cookie.js', array('jquery'), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'mc_cookie_js' );
+
  
 
 // Register Sidebars

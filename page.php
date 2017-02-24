@@ -53,6 +53,11 @@ if ( class_exists( 'WooCommerce' ) ) {
       					get_template_part( 'template-parts/content', 'home' );
     				}
 
+    				elseif( is_page( 'meet-the-staff' ) ) {
+      					get_template_part( 'template-parts/content', 'staff' );
+    				}
+
+
 					else {
 					   get_template_part( 'loop-templates/content', 'page' );
 					}

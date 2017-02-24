@@ -35,13 +35,7 @@ h1, h2, h3, h4, h5 {
 	text-rendering: optimizeLegibility;
     letter-spacing: .15em;
     margin-bottom: 50px;
-    text-shadow: 
-      1px -1px 0 #767676, 
-      -1px 2px 1px #737272, 
-      -2px 4px 1px #767474, 
-      -3px 6px 1px #787777, 
-      -4px 8px 1px #7b7a7a, 
-      -5px 10px 1px #7f7d7d,
+    text-shadow: 0px 0px 6px rgba(0,0,0,0.7);
 
   }
 
@@ -121,14 +115,13 @@ hr.sep {
 }
 
 #wrapper-navbar {
-	padding-top: 35px;
 	margin-bottom: 25px;
+	transition: all .5s;
 }
 
 #topInfo {
 	background: $black;
     height: 35px;
-    display: flex;
     align-items: center;
     justify-content: center;
     color: $white;
@@ -161,6 +154,24 @@ hr.sep {
 		    }
     	}
     }
+
+    .close {
+    	color: $white;
+    	position: absolute;
+    	right: 25px;
+    	text-shadow: none;
+    	cursor: pointer;
+    }
+}
+
+#bannerPull {
+	position: absolute;
+	right: 5vw;
+	background: $black;
+	color: $white;
+	padding: 5px 10px;
+	cursor: pointer;
+	z-index: 1;
 }
 
 #cartContents {

@@ -27,10 +27,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="hfeed site" id="page">
 
-<div id = "topInfo">
+<div id = "topInfo" class = "hidden-xs-up">
 	<div id = "topMessage" class = "text-center">
 		<p><?php the_field('message_text', 'option'); ?><a href = "<?php the_field('message_link', 'option'); ?>"><?php the_field('link_text', 'option'); ?></a></p>
 	</div>
+	
+	<div class="close" aria-label="Close">
+	  	<span aria-hidden="true">&times;</span>
+	</div>
+</div>
+
+<div id = "bannerPull"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
 
 <!-- 	<div class = "col-md-4">
 		<div id = "topSocial" class = "text-center">
