@@ -152,3 +152,99 @@ add_action( 'woocommerce_after_single_product_summary', 'mc_single_product_more_
 function mc_single_product_more_info () {
     echo '<div id = "productInfo"><h2>Product Info</h2><p>' . get_the_content() . '</p></div>';
 }
+
+// Add the retailer role
+
+add_role('retailer', __(
+    'Retailer'),
+    array(
+        'read' => true, // true allows this capability
+        'edit_posts' => true, // Allows user to edit their own posts
+        'edit_pages' => true, // Allows user to edit pages
+        'edit_others_posts' => true, // Allows user to edit others posts not just their own
+        'create_posts' => true, // Allows user to create new posts
+        'manage_categories' => true, // Allows user to manage post categories
+        'publish_posts' => true, // Allows the user to publish, otherwise posts stays in draft mode
+        'edit_themes' => false, // false denies this capability. User can’t edit your theme
+        'install_plugins' => false, // User cant add new plugins
+        'update_plugin' => false, // User can’t update any plugins
+        'update_core' => false // user cant perform core updates
+        )
+);
+
+// Apply a different tax rate for retailers
+ 
+function mc_diff_rate_for_retail( $tax_class, $product ) {
+    if ( is_user_logged_in() && current_user_can( 'retailer' ) ) {
+    $tax_class = 'Zero Rate'; 
+    }
+return $tax_class; 
+}
+
+add_filter( 'woocommerce_product_tax_class', 'mc_diff_rate_for_retail', 1, 2 );
+
+// Add Cash on Delivery for Retailer role
+
+function mc_disable_cod( $available_gateways ) {
+    if ( isset($available_gateways['cod']) && (!current_user_can('retailer') || ! is_user_logged_in()) ) {
+    unset($available_gateways['cod']);
+     }
+     return $available_gateways;
+}
+
+add_filter('woocommerce_available_payment_gateways', 'mc_disable_cod', 99, 1);
+
+//Create the custom woocommerce product fields
+add_action( 'woocommerce_product_options_general_product_data', 'mc_add_custom_fields' );
+function mc_add_custom_fields() {
+
+    // Add the retailer price
+    woocommerce_wp_text_input( array(
+        'id' => '_retail-price',
+        'type' => 'number',
+        'label' => 'Retail Price',
+        'description' => 'This is the price for retailers',
+        'desc_tip' => 'true'
+    ) );
+
+}
+
+//Save the custom woocommerce fields
+add_action( 'woocommerce_process_product_meta', 'mc_save_custom_fields' );
+function mc_save_custom_fields( $post_id ) {
+    if ( ! empty( $_POST['_retail-price']) || empty( $_POST['_retail-price'] ) ) {
+        update_post_meta( $post_id, '_retail-price', esc_attr( $_POST['_retail-price'] ) );
+    }
+}
+
+// Display the retail price to retailers
+function mc_retail_price ($price, $product){
+    $retail_price = get_post_meta( $product->id, '_' . 'retail-price', true );
+    if ( current_user_can ('retailer' ) && $retail_price ) {
+        return $retail_price;
+            }
+    elseif ( current_user_can ('retailer' ) && !$retail_price || !current_user_can('retailer') ) {
+        return $price;
+            }
+}
+
+add_filter('woocommerce_get_price','mc_retail_price', 10, 2);
+
+
+//Add Retail Price Column
+
+function mc_add_admin_column ($columns){
+    $columns['retail_price'] = 'Retail Price'; 
+        return $columns;
+}
+add_filter( 'manage_edit-product_columns', 'mc_add_admin_column',15 );
+ 
+//Show the Retail Price
+
+function mc_display_retail_price_column ( $column, $post_id ) {
+    if ( $column == 'retail_price' ) {
+        echo get_post_meta( $post_id, '_' . 'retail-price', true );
+    }
+}
+add_action( 'manage_product_posts_custom_column', 'mc_display_retail_price_column', 10, 2 );
+

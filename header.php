@@ -49,7 +49,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div>
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
+	<div class="wrapper-fluid wrapper-navbar pt-5" id="wrapper-navbar">
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content',
 		'understrap' ); ?></a>
