@@ -9657,20 +9657,25 @@ hr.sep {
 
 #bestSellers h1, #instagramSlider h1 {
   text-align: center;
-  margin-bottom: 25px; }
-  #bestSellers h1:before, #instagramSlider h1:before {
-    border: 21px solid #cfc191;
-    border-right-width: 170px;
-    border-left-color: transparent; }
-  #bestSellers h1:after, #instagramSlider h1:after {
-    border: 21px solid #cfc191;
-    border-left-width: 170px;
-    border-right-color: transparent; }
-  #bestSellers h1:before, #bestSellers h1:after, #instagramSlider h1:before, #instagramSlider h1:after {
-    content: '';
-    display: inline-block;
-    z-index: -1;
-    transform: translateY(7px); }
+  margin-bottom: 25px;
+  /* 	    &:before {
+	    	border: 21px solid $gold;
+			border-right-width: 170px;
+    		border-left-color: transparent;
+	    }
+
+	    &:after {
+	    	border: 21px solid $gold;
+			border-left-width: 170px;
+    		border-right-color: transparent;
+	    } 
+
+	    &:before, &:after {
+			content: '';
+		    display: inline-block;
+		    z-index: -1;
+		    transform: translateY(7px);
+	    } */ }
   #bestSellers h1 span, #instagramSlider h1 span {
     color: #000000;
     border: solid 5px #cfc191;
@@ -9717,6 +9722,13 @@ hr.sep {
 
 #wpsl-radius label {
   width: 50px !important; }
+
+/*|||||||||||||||||||[STAFF]|||||||||||||||||||*/
+.staff_card img {
+  border: solid 5px #cfc191; }
+
+.staff_card em {
+  color: #cfc191; }
 
 /*------------------------------------------------*/
 /*---------------[RESPONSIVE LAYOUTS]-------------*/

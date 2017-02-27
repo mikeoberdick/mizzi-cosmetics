@@ -248,3 +248,9 @@ function mc_display_retail_price_column ( $column, $post_id ) {
 }
 add_action( 'manage_product_posts_custom_column', 'mc_display_retail_price_column', 10, 2 );
 
+// Add the staff thumbnail size
+add_action( 'after_setup_theme', 'mc_thumb_sizes' );
+function mc_thumb_sizes() {
+    add_image_size( 'staff-pic', 275, 275, array( 'center', 'top' ) );
+}
+

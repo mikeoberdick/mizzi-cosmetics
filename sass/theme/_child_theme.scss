@@ -329,7 +329,7 @@ hr.sep {
 	    text-align: center;
 	    margin-bottom: 25px;
 
-	    &:before {
+/* 	    &:before {
 	    	border: 21px solid $gold;
 			border-right-width: 170px;
     		border-left-color: transparent;
@@ -339,14 +339,14 @@ hr.sep {
 	    	border: 21px solid $gold;
 			border-left-width: 170px;
     		border-right-color: transparent;
-	    }
+	    } 
 
 	    &:before, &:after {
 			content: '';
 		    display: inline-block;
 		    z-index: -1;
 		    transform: translateY(7px);
-	    }
+	    } */
 
 	    span {
 	    	color: #000000;
@@ -424,6 +424,18 @@ hr.sep {
 #wpsl-radius {
 	label {
 		width: 50px !important;
+	}
+}
+
+/*|||||||||||||||||||[STAFF]|||||||||||||||||||*/
+
+.staff_card {
+	img {
+		border: solid 5px $gold;
+	}
+
+	em {
+		color: $gold
 	}
 }
 

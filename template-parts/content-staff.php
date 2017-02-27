@@ -42,12 +42,12 @@
 
         <?php
         $image = get_sub_field('picture');
-        $size = 'thumbnail';
+        $size = 'staff-pic';
         $pic = $image['sizes'][ $size ];
         ?>
 
-        <div class = "col-sm-4">
-            <img class = "rounded-circle" src = "<?php echo $pic; ?>" />
+        <div class = "staff_card col-sm-4 mb-5">
+            <img class = "rounded-circle mb-3" src = "<?php echo $pic; ?>" />
             <h5><?php the_sub_field('name'); ?></h5>
             <em><?php the_sub_field('title'); ?></em>
             <p><?php the_sub_field('bio'); ?></p>
