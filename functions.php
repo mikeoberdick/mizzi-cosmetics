@@ -22,9 +22,10 @@ function theme_enqueue_styles() {
 
 // Add the Google Fonts
 function mc_enqueue_gf() {
-    wp_enqueue_style( 'Didact Gothic', 'https://fonts.googleapis.com/css?family=Didact+Gothic' );
-    wp_enqueue_style( 'Open Sans', 'https://fonts.googleapis.com/css?family=Open+Sans' );
+    wp_enqueue_style( 'Arimo', 'https://fonts.googleapis.com/css?family=Arimo' );
     wp_enqueue_style( 'Raleway', 'https://fonts.googleapis.com/css?family=Raleway' );
+    wp_enqueue_style( 'Quicksand', 'https://fonts.googleapis.com/css?family=Quicksand' );
+    wp_enqueue_style( 'Poiret One', 'https://fonts.googleapis.com/css?family=Poiret+One' );
 }
 add_action('wp_enqueue_scripts', 'mc_enqueue_gf');
 
@@ -153,6 +154,12 @@ function mc_single_product_more_info () {
     echo '<div id = "productInfo"><h2>Product Info</h2><p>' . get_the_content() . '</p></div>';
 }
 
+// Add the staff thumbnail size
+add_action( 'after_setup_theme', 'mc_thumb_sizes' );
+function mc_thumb_sizes() {
+    add_image_size( 'staff-pic', 275, 275, array( 'center', 'top' ) );
+}
+
 // Add the retailer role
 
 add_role('retailer', __(
@@ -247,10 +254,3 @@ function mc_display_retail_price_column ( $column, $post_id ) {
     }
 }
 add_action( 'manage_product_posts_custom_column', 'mc_display_retail_price_column', 10, 2 );
-
-// Add the staff thumbnail size
-add_action( 'after_setup_theme', 'mc_thumb_sizes' );
-function mc_thumb_sizes() {
-    add_image_size( 'staff-pic', 275, 275, array( 'center', 'top' ) );
-}
-

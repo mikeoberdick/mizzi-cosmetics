@@ -48,8 +48,8 @@
 
         <div class = "staff_card col-sm-4 mb-5">
             <img class = "rounded-circle mb-3" src = "<?php echo $pic; ?>" />
-            <h5><?php the_sub_field('name'); ?></h5>
-            <em><?php the_sub_field('title'); ?></em>
+            <h3 class = "staff_name"><?php the_sub_field('name'); ?></h3>
+            <h5 class = "staff_title"><?php the_sub_field('title'); ?></h5>
             <p><?php the_sub_field('bio'); ?></p>
         </div>
 

@@ -12,9 +12,14 @@ Template:    Understrap
 /*-----------------[BASIC STYLES]-----------------*/
 /*------------------------------------------------*/
 
+body {
+	color: #b2b2b2;
+	font-family: $bodyFont;
+}
+
 h1, h2, h3, h4, h5 {
 	color: #000;
-	font-family: 'Didact Gothic', sans-serif;
+	font-family: $headerFont;
 }
 
 .entry-header {
@@ -24,10 +29,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .titleWrapper {
-	background-color: rgba(255, 255, 255, 0.70);
+	background-color: rgba(0, 0, 0, 0.70);
 }
 
 .page_header {
+	color: white;
 	font-size: 10vh;
 	padding: 50px;
 	text-align: center;
@@ -35,14 +41,8 @@ h1, h2, h3, h4, h5 {
 	text-rendering: optimizeLegibility;
     letter-spacing: .15em;
     margin-bottom: 50px;
-    text-shadow: 0px 0px 6px rgba(0,0,0,0.7);
 
   }
-
-body {
-	color: #b2b2b2;
-	font-family: 'open-sans', sans-serif;
-}
 
 .mb {
 	margin-bottom: 10vh;
@@ -144,8 +144,8 @@ hr.sep {
     	a {
     		margin-left: 5px;
 		    padding: 3px 5px;
-		    background-color: $white;
-		    color: $black;
+		    background-color: $gold;
+		    color: $white;
 		    border-radius: 2px;
 		    font-size: 11px;
 
@@ -222,7 +222,6 @@ hr.sep {
 	color: $grey;
 	padding-top: 0;
 	padding-bottom: 0;
-	text-transform: uppercase;
 	font-size: 12px;
 	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.82);
 	-moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.82);
@@ -245,10 +244,11 @@ hr.sep {
 
 		li {
 			margin-bottom: 5px;
+			float: none;
+			display: block;
 
 			a {
 				color: $grey;
-				text-transform: uppercase;
 				font-size: 12px;
 
 				&:hover {
@@ -355,7 +355,7 @@ hr.sep {
 		    display: inline-flex;
 		    text-transform: uppercase;
 		    font-weight: bold;
-		    font-family: 'Didact Gothic', sans-serif;
+		    font-family: $headerFont;
 
 	    }
 }
@@ -434,8 +434,13 @@ hr.sep {
 		border: solid 5px $gold;
 	}
 
-	em {
-		color: $gold
+	h3 {
+		font-weight: bold;
+	}
+
+	h5 {
+		color: $gold;
+		font-weight: bold;
 	}
 }
 
