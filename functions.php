@@ -109,10 +109,10 @@ if( function_exists('acf_add_options_page') ) {
     $args = array(
     
     /* (string) The title displayed on the options page. Required. */
-    'page_title' => 'Mizzi Cosmetics Site Content',
+    'page_title' => 'Notification Banner Content',
     
     /* (string) The title displayed in the wp-admin sidebar. Defaults to page_title */
-    'menu_title' => 'Site Content',
+    'menu_title' => 'Notication Banner',
     
 );
 
@@ -202,14 +202,14 @@ function mc_disable_cod( $available_gateways ) {
 add_filter('woocommerce_available_payment_gateways', 'mc_disable_cod', 99, 1);
 
 //Create the custom woocommerce product fields
-add_action( 'woocommerce_product_options_general_product_data', 'mc_add_custom_fields' );
+add_action( 'woocommerce_product_options_pricing', 'mc_add_custom_fields' );
 function mc_add_custom_fields() {
 
     // Add the retailer price
     woocommerce_wp_text_input( array(
         'id' => '_retail-price',
         'type' => 'number',
-        'label' => 'Retail Price',
+        'label' => 'Retail Price' . ' (' . get_woocommerce_currency_symbol() . ')',
         'description' => 'This is the price for retailers',
         'desc_tip' => 'true'
     ) );

@@ -1,6 +1,14 @@
-<div id = "heroSlider" class = "row mb">
-    <?php echo do_shortcode('[rev_slider alias="hero_slider"]'); ?>
-</div><!-- #heroSlider -->
+<div id = "hpHero" class = "row mb">
+<div class = "col-sm-4"><img src = "<?php the_field ('hero_image'); ?>" /></div>
+<div class = "col-sm-8">
+    <h1>Mizzi Cosmetics</h1>
+    <h3>The Art of Nature Blended Beauty</h3>
+    <p><?php the_field ('message'); ?></p></div>
+</div><!-- #hpHero -->
+
+<!--
+
+// BEST SELLERS SECTION
 
 <div id = "bestSellers" class = "row mb pb">
 
@@ -19,7 +27,6 @@
     if ( $loop->have_posts() ) {
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <div class = "col-md-3 col-sm-6">
-
 
 <?php   do_action( 'woocommerce_before_shop_loop_item' );
         echo woocommerce_get_product_thumbnail();

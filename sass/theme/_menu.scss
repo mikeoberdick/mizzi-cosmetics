@@ -111,12 +111,35 @@ nav.main_menu:before {
   animation: menu-animation 0.8s ease-out forwards;
 }
 
-ul#menu-main-navigation:before {
-    content: url(/wp-content/uploads/2017/02/mizzi-symbols.png);
-    margin-bottom: 25px;
-    display: block;
-    opacity: 0;
+.shopLink a {
+    color: $white !important;
+    background-color: $gold;
+    border: solid 1px $white !important;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 2vh !important;
+
+    &:after {
+    content: "\f07a";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-left: 5px;
+    }
+}
+
+.hpImageLink a {
+  font-size: 0 !important;
+  color: transparent !important;
+    
+    &:before {
+      content: url(/wp-content/uploads/2017/02/mizzi-symbols.png);
+      margin-bottom: 25px;
+      display: inline-block;
   }
+}
 
 ul.main_menu {
   position: absolute;
