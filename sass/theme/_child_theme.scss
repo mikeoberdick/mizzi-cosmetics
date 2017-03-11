@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .titleWrapper {
-	background-color: rgba(0, 0, 0, 0.70);
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .page_header {
@@ -54,14 +54,13 @@ hr.sep {
 		margin-bottom: 7vh;
 
 		&:after {
-			content: "\002665";
+			content: '';
+			background-image: url(/wp-content/themes/understrap-child-master/img/sep_icons.png);
     		display: inline-block;
     		position: relative;
-		    top: -27px;
-		    padding: 0 10px;
-		    background: $white;
-		    color: $black;
-		    font-size: 32px;
+		    top: -18px;
+		    height:32px;
+		    width: 120px;
 				}
 }
 
@@ -289,6 +288,12 @@ hr.sep {
 
 /*|||||||||||||||||||[HOMEPAGE]|||||||||||||||||||*/
 
+#hpMessage {
+	font-family: 'Quicksand';
+    font-size: 2vh;
+
+}
+
 #hpSocialIcons {
 
 	a {
@@ -350,8 +355,6 @@ hr.sep {
 
 	    span {
 	    	color: #000000;
-			border: solid 5px $gold;
-		    padding: 10px 25px;
 		    display: inline-flex;
 		    text-transform: uppercase;
 		    font-weight: bold;

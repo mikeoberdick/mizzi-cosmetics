@@ -1,9 +1,8 @@
 <div id = "hpHero" class = "row mb">
-<div class = "col-sm-4"><img src = "<?php the_field ('hero_image'); ?>" /></div>
-<div class = "col-sm-8">
-    <h1>Mizzi Cosmetics</h1>
-    <h3>The Art of Nature Blended Beauty</h3>
-    <p><?php the_field ('message'); ?></p></div>
+<div class = "col-md-4"><img src = "<?php the_field ('hero_image'); ?>" /></div>
+<div class = "col-md-8">
+    <h1>Created by a Mother's love</h1>
+    <p id = "hpMessage"><?php the_field ('message'); ?></p></div>
 </div><!-- #hpHero -->
 
 <!--

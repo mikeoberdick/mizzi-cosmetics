@@ -9451,7 +9451,7 @@ h1, h2, h3, h4, h5 {
   background-position: center center; }
 
 .titleWrapper {
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.4); }
 
 .page_header {
   color: white;
@@ -9471,14 +9471,13 @@ hr.sep {
   text-align: center;
   margin-bottom: 7vh; }
   hr.sep:after {
-    content: "\002665";
+    content: '';
+    background-image: url(/wp-content/themes/understrap-child-master/img/sep_icons.png);
     display: inline-block;
     position: relative;
-    top: -27px;
-    padding: 0 10px;
-    background: #ffffff;
-    color: #000000;
-    font-size: 32px; }
+    top: -18px;
+    height: 32px;
+    width: 120px; }
 
 .wp-caption-text {
   text-align: center; }
@@ -9632,6 +9631,10 @@ hr.sep {
 /*----------------------[PAGES]-------------------*/
 /*------------------------------------------------*/
 /*|||||||||||||||||||[HOMEPAGE]|||||||||||||||||||*/
+#hpMessage {
+  font-family: 'Quicksand';
+  font-size: 2vh; }
+
 #hpSocialIcons a {
   color: #cfc191;
   font-size: 7.5vh;
@@ -9678,8 +9681,6 @@ hr.sep {
 	    } */ }
   #bestSellers h1 span, #instagramSlider h1 span {
     color: #000000;
-    border: solid 5px #cfc191;
-    padding: 10px 25px;
     display: inline-flex;
     text-transform: uppercase;
     font-weight: bold;
@@ -9857,7 +9858,9 @@ nav.main_menu:before {
   border: solid 1px #ffffff !important;
   padding: 10px 15px;
   border-radius: 5px;
-  font-size: 2vh !important; }
+  font-size: 2vh !important;
+  display: block;
+  margin-bottom: 25px; }
   .shopLink a:after {
     content: "\f07a";
     display: inline-block;

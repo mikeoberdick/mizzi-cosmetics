@@ -26,6 +26,7 @@ function mc_enqueue_gf() {
     wp_enqueue_style( 'Raleway', 'https://fonts.googleapis.com/css?family=Raleway' );
     wp_enqueue_style( 'Quicksand', 'https://fonts.googleapis.com/css?family=Quicksand' );
     wp_enqueue_style( 'Poiret One', 'https://fonts.googleapis.com/css?family=Poiret+One' );
+    wp_enqueue_style( 'Open Sans', 'https://fonts.googleapis.com/css?family=Open+Sans' );
 }
 add_action('wp_enqueue_scripts', 'mc_enqueue_gf');
 

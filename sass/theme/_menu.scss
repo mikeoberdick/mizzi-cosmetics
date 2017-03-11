@@ -118,6 +118,8 @@ nav.main_menu:before {
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 2vh !important;
+    display: block;
+    margin-bottom: 25px;
 
     &:after {
     content: "\f07a";
