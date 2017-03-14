@@ -1,3 +1,53 @@
+<?php
+/**
+ * The template for displaying the homepage.
+ *
+ * @package understrap
+ */
+
+get_header();
+
+$container   = get_theme_mod( 'understrap_container_type' );
+$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+// On WooCommerce pages there is no need for sidebars as they leave
+// too little space for WooCommerce itself. We check if WooCommerce
+// is active and the current page is a WooCommerce page and we do
+// not render sidebars.
+$is_woocommerce = false;
+$this_page_id   = get_queried_object_id();
+if ( class_exists( 'WooCommerce' ) ) {
+
+    if ( is_woocommerce() || is_shop() || get_option( 'woocommerce_shop_page_id' ) === $this_page_id ||
+         get_option( 'woocommerce_cart_page_id' ) == $this_page_id || get_option( 'woocommerce_checkout_page_id' ) == $this_page_id ||
+         get_option( 'woocommerce_pay_page_id' ) == $this_page_id || get_option( 'woocommerce_thanks_page_id' ) === $this_page_id ||
+         get_option( 'woocommerce_myaccount_page_id' ) == $this_page_id || get_option( 'woocommerce_edit_address_page_id' ) == $this_page_id ||
+         get_option( 'woocommerce_view_order_page_id' ) == $this_page_id || get_option( 'woocommerce_terms_page_id' ) == $this_page_id
+    ) {
+
+        $is_woocommerce = true;
+    }
+}
+?>
+
+<div class="wrapper pt-0" id="page-wrapper">
+
+<div class = "container-fluid">
+    <div class = "row">
+        <div id = "hpMainImage" style = "background-image: url('<?php the_field('main_image'); ?>')" class = "mb"></div>
+    </div>
+</div>
+
+    <div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
+
+        <div class="row">
+
+            <!-- Do the left sidebar check -->
+            <?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
+
+            <main class="site-main" id="main">
+
+                <?php while ( have_posts() ) : the_post(); ?>
+
 <div id = "hpHero" class = "row mb">
 <div class = "col-md-4"><img src = "<?php the_field ('hero_image'); ?>" /></div>
 <div class = "col-md-8">
@@ -93,4 +143,18 @@
 <div id = "instagramSlider" class = "row">
     <h1 class = "h1 col-sm-12"><span>@MIZZICOSMETICS</span></h1>
     <?php echo do_shortcode('[rev_slider alias="instagram"]'); ?>
-</div><!-- #instagramSlider -->
+</div><!-- #instagramSlider --> 
+                 
+                <?php endwhile; // end of the loop. ?>
+
+            </main><!-- #main -->
+
+        </div><!-- #primary -->
+
+    </div><!-- .row -->
+
+</div><!-- Container end -->
+
+</div><!-- Wrapper end -->
+
+<?php get_footer(); ?>

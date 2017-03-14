@@ -49,8 +49,8 @@ if ( class_exists( 'WooCommerce' ) ) {
 
 					<?php
 
-					if( is_page( 'homepage' ) ) {
-      					get_template_part( 'template-parts/content', 'home' );
+					if( is_page( 'testimonials' ) ) {
+      					get_template_part( 'template-parts/content', 'testimonials' );
     				}
 
     				elseif( is_page( 'meet-the-staff' ) ) {

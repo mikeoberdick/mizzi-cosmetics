@@ -9503,6 +9503,9 @@ hr.sep {
   display: block;
   margin: 0 auto; }
 
+.custom-logo-link img {
+  width: 250px; }
+
 #headerLinks a {
   margin-right: 15px;
   color: #cfc191;
@@ -9514,6 +9517,20 @@ hr.sep {
 #wrapper-navbar {
   margin-bottom: 25px;
   transition: all .5s; }
+
+.home #wrapper-navbar {
+  margin-bottom: 0;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3); }
+
+.home #hpMainImage {
+  z-index: -1;
+  height: 80vh;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center; }
 
 #topInfo {
   background: #000000;
@@ -9734,6 +9751,45 @@ hr.sep {
 .staff_card h5 {
   color: #cfc191;
   font-weight: bold; }
+
+/*|||||||||||||||[TESTIMONIALS]|||||||||||||||*/
+.field_type-star_rating {
+  display: flex;
+  justify-content: center; }
+
+.star-rating {
+  font-size: 32px !important;
+  color: #cfc191;
+  cursor: inherit !important; }
+  .star-rating li i {
+    cursor: inherit !important; }
+
+.testimonialRight p {
+  font-size: 2.5vh;
+  font-family: 'quicksand', sans-serif;
+  border: solid 3px #cfc191;
+  padding: 25px;
+  border-radius: 8px;
+  position: relative; }
+  .testimonialRight p:before, .testimonialRight p:after {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+  .testimonialRight p:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #ffffff;
+    border-width: 30px;
+    margin-top: -30px; }
+  .testimonialRight p:before {
+    border-color: rgba(207, 193, 145, 0);
+    border-right-color: #cfc191;
+    border-width: 34px;
+    margin-top: -34px; }
 
 /*------------------------------------------------*/
 /*---------------[RESPONSIVE LAYOUTS]-------------*/
