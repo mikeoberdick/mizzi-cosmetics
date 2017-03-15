@@ -9790,6 +9790,39 @@ hr.sep {
     border-right-color: #cfc191;
     border-width: 34px;
     margin-top: -34px; }
+  @media (max-width: 991px) {
+    .testimonialRight p:before, .testimonialRight p:after {
+      left: 50%;
+      right: inherit;
+      top: inherit;
+      bottom: 100%; }
+    .testimonialRight p:after {
+      border-right-color: transparent;
+      border-bottom-color: #fff;
+      margin-left: -30px; }
+    .testimonialRight p:before {
+      border-right-color: transparent;
+      border-bottom-color: #cfc191;
+      margin-left: -34px; } }
+
+/*||||||||||||||||||||||[BLOG]||||||||||||||||||||*/
+.categoryCard a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 3vh;
+  text-shadow: 0 0 15px #000; }
+  .categoryCard a:hover {
+    text-decoration: none; }
+  .categoryCard a div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    margin-bottom: 25px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; }
 
 /*------------------------------------------------*/
 /*---------------[RESPONSIVE LAYOUTS]-------------*/

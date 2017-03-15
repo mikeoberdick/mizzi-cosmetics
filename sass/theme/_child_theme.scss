@@ -523,9 +523,57 @@ hr.sep {
 			margin-top: -34px;
 		}
 
+		@include media-breakpoint-down(md) {  
+			&:before, &:after {
+				left: 50%;
+				right: inherit;
+				top: inherit;
+				bottom: 100%;
+			}
+
+			&:after {
+				border-right-color: transparent;
+				border-bottom-color: #fff;
+				margin-left: -30px;
+			}
+
+			&:before {
+				border-right-color:transparent;
+				border-bottom-color: #cfc191;
+				margin-left: -34px;
+			}
+		}
+
 	}
 }
 
+
+/*||||||||||||||||||||||[BLOG]||||||||||||||||||||*/
+
+.categoryCard {
+	a {
+		color: #fff;
+	    font-weight: 700;
+	    font-size: 3vh;
+	    text-shadow: 0 0 15px #000;
+
+	    &:hover {
+	    	text-decoration: none;
+	    }
+
+	    div {
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    padding: 25px;
+		    margin-bottom: 25px;
+		    height: 250px;
+		    background-size: contain;
+		    background-repeat: no-repeat;
+		    background-position: center center;
+	    }
+	}
+}
 
 /*------------------------------------------------*/
 /*---------------[RESPONSIVE LAYOUTS]-------------*/
