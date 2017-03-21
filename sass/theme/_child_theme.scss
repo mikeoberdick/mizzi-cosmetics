@@ -12,6 +12,25 @@ Template:    Understrap
 /*-----------------[BASIC STYLES]-----------------*/
 /*------------------------------------------------*/
 
+	#maintenanceMessageWrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+
+		#maintenanceMessage {
+			text-align: center;
+		    padding: 50px;
+		    border: solid 5px $gold;
+		    border-radius: 10px;
+		    margin-top: 50px;
+		    font-family: $headerFont;
+		    width: 75%;
+		}
+	}
+
+
 body {
 	color: #b2b2b2;
 	font-family: $bodyFont;
@@ -20,12 +39,24 @@ body {
 h1, h2, h3, h4, h5 {
 	color: #000;
 	font-family: $headerFont;
+	overflow-wrap: break-word;
+  	word-wrap: break-word;
+  	-ms-word-break: break-all;
+	word-break: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
 }
 
 .entry-header {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center center;
+
+	@include media-breakpoint-down(md) {
+    	background-size: cover;
+    }
 }
 
 .titleWrapper {
@@ -41,6 +72,15 @@ h1, h2, h3, h4, h5 {
 	text-rendering: optimizeLegibility;
     letter-spacing: .15em;
     margin-bottom: 50px;
+
+    @include media-breakpoint-down(md) {
+    	font-size: 6vh;
+    }
+
+    @include media-breakpoint-down(sm) {
+    	font-size: 4vh;
+    	padding: 25px;
+    }
 
   }
 
@@ -98,12 +138,6 @@ hr.sep {
 	margin: 0 auto;
 }
 
-.custom-logo-link {
-	img {
-		width: 250px;
-	}
-}
-
 #headerLinks {
 
 	a {
@@ -122,7 +156,31 @@ hr.sep {
 #wrapper-navbar {
 	margin-bottom: 25px;
 	transition: all .5s;
-}
+
+	.container {
+		@include media-breakpoint-down(md) {
+    		display: flex;
+    		flex-direction: row;
+    		align-items: center;
+    			}
+		@include media-breakpoint-down(sm) {
+			display: flex;
+    		flex-direction: column;
+    		align-items: center;
+
+    		.custom-logo-link {
+    			@include media-breakpoint-down(md) {
+    				max-width: 300px;
+    			}
+    			@include media-breakpoint-down(sm) {
+    				max-width: 250px;
+    				margin-top: 40px;
+    				margin-bottom: 15px;
+    				}
+    			}
+    		}
+    	}    
+	}
 
 .home {
 	#wrapper-navbar {
@@ -134,17 +192,42 @@ hr.sep {
 
 	#hpMainImage {
 		z-index: -1;
-		height: 80vh;
+		height: 75vh;
 		width: 100%;
 	    background-size: 100%;
 	    background-repeat: no-repeat;
 	    background-position: center center;
+
+	    @include media-breakpoint-down(lg) {
+	    	background-size: cover;
+		}
 	}
+
+	.jump_link {
+	    	height: 50px;
+	    	width: 50px;
+	    	background-color: white;
+	    	background-size: 100%;
+	    	background-repeat: no-repeat;
+	    	border: solid 3px #000;
+	    	padding: 15px;
+    		border-radius: 50%;
+		    position: absolute;
+		    bottom: -25px;
+		    left: 50%;
+			margin-left: -25px;
+			z-index: 1;
+
+			i {
+				position: absolute;
+			}
+			}
 }
 
 #topInfo {
 	background: $black;
-    height: 35px;
+    min-height: 35px;
+    padding: 15px;
     align-items: center;
     justify-content: center;
     color: $white;
@@ -238,8 +321,26 @@ hr.sep {
     	margin-right: 10px;
     }
 
+    #footerSignup {
+    	h3 {
+    		text-align: center;
+
+    		@include media-breakpoint-up(md) {
+				text-align: left;
+    		}
+    	}
+    }
+
 
 }
+
+#mc_embed_signup {
+		@include media-breakpoint-down(md) {
+		    display: flex;
+    		flex-direction: column;
+   			align-items: center;
+   		}
+	}
 
 #wrapper-footer {
 	color: $grey;
@@ -340,6 +441,11 @@ hr.sep {
 		    height: 40px;
 		    border-right: 0;
 		    display: block;
+			
+			@include media-breakpoint-down(sm) {
+				width: 100px;
+			}
+
 		}
 
 		#mc-embedded-subscribe {
@@ -383,6 +489,10 @@ hr.sep {
 		    text-transform: uppercase;
 		    font-weight: bold;
 		    font-family: $headerFont;
+			
+			@include media-breakpoint-down(sm) {
+				font-size: 1.5rem;
+			}
 
 	    }
 }
@@ -401,9 +511,17 @@ hr.sep {
 	display: block;
 	width: 100%;
 
-	.page_header {
-		margin-bottom: 0;
-	}
+	@include media-breakpoint-down(md) {
+    	background-size: cover;
+    }
+
+    .entry-title {
+    	margin-bottom: 0 !important;
+    }
+}
+
+.woocommerce ul.products {
+	margin-top: 25px;
 }
 
 

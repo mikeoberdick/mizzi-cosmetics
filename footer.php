@@ -24,7 +24,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div>
 
 			<div id = "footerSignup" class = "col-sm-12  col-md-6">
-				<h3 class = "text-left">Join the Club</h3>
+				<h3>Join the Club</h3>
 					<div id="mc_embed_signup"><!-- Begin MailChimp Signup Form -->
 	                <form action="//mizzicosmetics.us13.list-manage.com/subscribe/post?u=c8578af665b301edf76be65e9&amp;id=60287b84bb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 	                    <div id="mc_embed_signup_scroll">
@@ -87,7 +87,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="site-info">
 					
 					<span>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></span><br />
-					<span>Website by <a href = "http://www.designs4theweb.com">Designs 4 The Web</a></span>
+					<span>Website by <a href = "http://www.designs4theweb.com" target = "_blank">Designs 4 The Web</a></span>
 
 					</div><!-- .site-info -->
 

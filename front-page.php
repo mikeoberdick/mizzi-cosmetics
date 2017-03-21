@@ -33,7 +33,8 @@ if ( class_exists( 'WooCommerce' ) ) {
 
 <div class = "container-fluid">
     <div class = "row">
-        <div id = "hpMainImage" style = "background-image: url('<?php the_field('main_image'); ?>')" class = "mb"></div>
+        <div id = "hpMainImage" style = "background-image: url('<?php the_field('main_image'); ?>')"></div>
+        <div class = "jump_link_wrapper"><a class = "jump_link" href = "#hpHero"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></div>
     </div>
 </div>
 
@@ -48,7 +49,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 
                 <?php while ( have_posts() ) : the_post(); ?>
 
-<div id = "hpHero" class = "row mb">
+<div id = "hpHero" class = "row mt-5 mb">
 <div class = "col-md-4"><img src = "<?php the_field ('hero_image'); ?>" /></div>
 <div class = "col-md-8">
     <h1>Created by a Mother's love</h1>
@@ -111,12 +112,12 @@ if ( class_exists( 'WooCommerce' ) ) {
     
     <div class = "col-md-4">
         <h3>Become a Retailer</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta doloribus, corporis totam, numquam assumenda repellat eos dolore quas fuga molestiae minus labore quia culpa. Sint quos illo molestias eum voluptatibus?</p>
+        <p>Join Mizzi Cosmetics as a retailer.  Click <a href = "/contact-us/retail-opportunities/">here</a> to get in touch with our retail specialist.</p>
     </div>
 
     <div id = "hpSignup" class = "col-md-4">
         <h3>Join the Club</h3>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+         <p>Join our mailing list to get exclusive news and offers.</p>
             <div id="mc_embed_signup"><!-- Begin MailChimp Signup Form -->
                 <form action="//mizzicosmetics.us13.list-manage.com/subscribe/post?u=c8578af665b301edf76be65e9&amp;id=60287b84bb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">

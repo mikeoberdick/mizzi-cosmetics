@@ -36,28 +36,38 @@
 
         <div class = "row text-center">
 
-        <?php if( have_rows('staff_member') ):
-
-        while ( have_rows('staff_member') ) : the_row(); ?>
-
         <?php
-        $image = get_sub_field('picture');
-        $size = 'staff-pic';
-        $pic = $image['sizes'][ $size ];
-        ?>
+            if( have_rows('staff_member') ):
+                
+                $i = 0; //Set the counter
+            
+            while ( have_rows('staff_member') ) : the_row();
 
-        <div class = "staff_card col-sm-4 mb-5">
-            <img class = "rounded-circle mb-3" src = "<?php echo $pic; ?>" />
-            <h3 class = "staff_name"><?php the_sub_field('name'); ?></h3>
-            <h5 class = "staff_title"><?php the_sub_field('title'); ?></h5>
-            <p><?php the_sub_field('bio'); ?></p>
-        </div>
+            //Set the variables
+            $image = get_sub_field('picture');
+            $size = 'staff-pic';
+            $pic = $image['sizes'][ $size ];
 
-        <?php 
-        endwhile;
-        endif;
-        ?>
+            $i++; //Increase the counter
+                
+                if ( $i < 3 ) { ?>
+                    <div class = "staff_card col-sm-6 mb-5">
+                <?php }
+                
+                else if ($i > 2) { ?>
+                    <div class = "staff_card col-sm-4 mb-5">
+                <?php } ?>
 
+                <img class = "rounded-circle mb-3" src = "<?php echo $pic; ?>" />
+                <h3 class = "staff_name"><?php the_sub_field('name'); ?></h3>
+                <h5 class = "staff_title"><?php the_sub_field('title'); ?></h5>
+                <p><?php the_sub_field('bio'); ?></p>
+                </div>
+
+                <?php
+                        endwhile;
+                            endif;
+                ?>
         </div><!-- .row -->
 
     </div><!-- .entry-content -->

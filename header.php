@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="hfeed site" id="page">
 
-<div id = "topInfo" class = "hidden-xs-up">
+<!-- <div id = "topInfo" class = "hidden-xs-up">
 	<div id = "topMessage" class = "text-center">
 		<p><?php the_field('message_text', 'option'); ?><a href = "<?php the_field('message_link', 'option'); ?>"><?php the_field('link_text', 'option'); ?></a></p>
 	</div>
@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div>
 </div>
 
-<div id = "bannerPull"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+<div id = "bannerPull"><i class="fa fa-arrow-down" aria-hidden="true"></i></div> -->
 
 <!-- 	<div class = "col-md-4">
 		<div id = "topSocial" class = "text-center">
@@ -49,7 +49,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div>
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div class="wrapper-fluid wrapper-navbar pt-5" id="wrapper-navbar">
+	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content',
 		'understrap' ); ?></a>

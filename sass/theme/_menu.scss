@@ -53,7 +53,14 @@
 
 .menu-toggle:hover { opacity: 1; }
 
-.open .navbar .menu-toggle { opacity: 1; }
+.open .navbar .menu-toggle {
+  opacity: 1;
+
+  @include media-breakpoint-down(sm) {
+        top: -25px;
+        left: 0;
+      }
+}
 
 .open .navbar .menu-toggle:before {
   opacity: 0;
@@ -137,9 +144,21 @@ nav.main_menu:before {
   color: transparent !important;
     
     &:before {
-      content: url(/wp-content/uploads/2017/02/mizzi-symbols.png);
-      margin-bottom: 25px;
-      display: inline-block;
+      content: "";
+      background-image: url(/wp-content/uploads/2017/02/mizzi-symbols.png);
+      height: 100px;
+      display: block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      @include media-breakpoint-down(md) {
+        height: 75px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        height: 50px;
+      }
   }
 }
 
@@ -216,6 +235,11 @@ li.menu-item-has-children > a:first-child {
       padding: 10px 15px;
       border: solid 1px;
 
+      @include media-breakpoint-down(sm) {
+          display: inline-block;
+          font-size: 2vh;
+      }
+
       &:hover {
         color: $gold;
       }
@@ -247,7 +271,8 @@ li.menu-item-has-children > a:first-child {
   }
 }
 
-#menu-main-navigation .sub-menu {
+#menu-main-navigation {
+  .sub-menu {
   padding-left: 0;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -258,6 +283,7 @@ li.menu-item-has-children > a:first-child {
     text-transform: capitalize;
     font-family: 'Raleway', sans-serif;
   }
+}
 
 }
 
