@@ -87,7 +87,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="site-info">
 					
 					<span>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></span><br />
-					<span>Website by <a href = "http://www.designs4theweb.com" target = "_blank">Designs 4 The Web</a></span>
+					<span>Website by <a href = "http://www.designs4theweb.com" target = "_blank">Designs 4 The Web</a></span><br />
+					<span>Photos by <a href = "https://www.mphanson.com/" target = "_blank" style = "margin-left: 5px;"><img src = "http://www.mizzicosmetics.com/wp-content/themes/understrap-child-master/img/mphstudio.png"></a></span>
 
 					</div><!-- .site-info -->
 
